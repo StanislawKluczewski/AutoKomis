@@ -6,13 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-/// <summary>
-/// WSTRZYKNIECIE DbContextu
-/// </summary>
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
    options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"))
 );
-
 
 builder.Services.AddSwaggerGen();
 

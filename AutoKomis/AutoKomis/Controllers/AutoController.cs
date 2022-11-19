@@ -111,7 +111,6 @@ namespace AutoKomis.Controllers
             return RedirectToAction("Index");
         }
 
-        //ZNAJDZ SAMOCHOD O ODPOWIEDNICH PARAMETRACH
        [HttpGet("ZnajdzAutoOdpowiednieParametry")]
         public IActionResult ZnajdzAutoOdpowiednieParametry(string marka, string paliwo)
         {

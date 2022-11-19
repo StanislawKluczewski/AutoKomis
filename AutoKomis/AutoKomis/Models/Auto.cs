@@ -8,15 +8,13 @@ namespace AutoKomis.Models
     {
         [Key]
         public int IdSamochodu { get; set; }
-        
+
         [ForeignKey("IdKomisu")]
         public int IdKomisu { get; set; }
 
         [ForeignKey("IdSprzedaży")]
         public int IdSprzedazy { get; set; }
-
         public Sprzedaz Sprzedaz { get; set; }
-
         public Komis Komis { get; set; }
 
         [DisplayName("Marka")]
