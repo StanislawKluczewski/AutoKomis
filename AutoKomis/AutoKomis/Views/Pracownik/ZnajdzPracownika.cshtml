@@ -1,0 +1,41 @@
+﻿@model IEnumerable<AutoKomis.Models.Pracownik>
+
+<div class="title-cointainer">
+    <div class="row pt-4">
+        <h1 class="index-title">Pracownicy o danym stanowisku: </h1>
+    </div>
+</div>
+ <div class="powrot-button">
+        <a asp-area="" class="Powrot-Index" asp-controller="Pracownik" asp-action="Index">
+            Powrót do Indexu
+        </a>
+</div>
+
+@if (Model.Count() == 0)
+{
+    <p id="Brak">Baza sprzedaży w określonym czasie!</p>
+}
+else
+{
+    <table id="table" class="table table-striped table-dark table-bordered table-hover table-sm">
+        <thead>
+            <tr class="name-of-headers">
+                <th>IdPracownika</th>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Stanowisko</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pracownicy in Model)
+            {
+                <tr>
+                    <td width="10%">@pracownicy.IdPracownika</td>
+                    <td width="10%">@pracownicy.Imie</td>
+                    <td width="10%">@pracownicy.Nazwisko</td>
+                    <td width="10%">@pracownicy.Stanowisko</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

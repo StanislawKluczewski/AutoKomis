@@ -1,0 +1,40 @@
+﻿@model AutoKomis.Models.Sprzedaz
+
+<form method="post" asp-action="UpdateSprzedazPost">
+    <input asp-for="IdSprzedazy" hidden />
+    <div class="create-conatiner">
+
+        <h1 class="add-title">Update Sprzedaży</h1>
+        <div class="top">
+            <div class="label-for">
+                <label asp-for="IdSamochodu"></label>
+                <hr class="space">
+                <label asp-for="IdPracownika"></label>
+                <hr class="space">
+                <label asp-for="IdKlienta"></label>
+                <hr class="space">
+                <label asp-for="DataZawarciaUmowy"></label>
+                <hr class="space">
+                <label asp-for="Kwota"></label>
+            </div>
+            <div class="input-for">
+                <input asp-for="IdSamochodu" class="form-control" />
+                <input asp-for="IdPracownika" class="form-control" />
+                <input asp-for="IdKlienta" class="form-control" />
+                <input asp-for="DataZawarciaUmowy" class="form-control" />
+                <input asp-for="Kwota" class="form-control" />
+            </div>
+        </div>
+
+        <div class="create-submit">
+            <div class="create-button">
+                <input type="submit" value="Update" class="create-input" />
+            </div>
+            <div class="back-button">
+                <button asp-controller="Sprzedaz" asp-action="Index" class="back-input">Back</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+

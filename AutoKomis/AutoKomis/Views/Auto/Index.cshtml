@@ -1,0 +1,91 @@
+﻿@model IEnumerable<AutoKomis.Models.Auto>
+
+<div class="title-cointainer">
+    <div class="row pt-4">
+        <h1 class="index-title">Auta</h1>
+    </div>
+</div>
+    <div class="action-conatiner">
+        <form method="get" asp-controller="Auto" asp-action="ZnajdzAutoOdpowiednieParametry">
+        <div class="action">
+            <h3 class="title-action">Znajdź Auto: </h3>
+            <div class="look-for">
+                <input type="text" name="marka"/>
+                <select id="select-options" name ="paliwo">
+                    <option type="text" value="Benzyna">Benzyna</option>
+                    <option type="text" value="Diesel">Diesel</option>
+                    <option type="text" value="LPG">LPG</option>
+                    <option type="text" value="Hybrid">Hybrid</option>
+                </select>
+                <input type="submit" class="szukaj"  value="Szukaj" />
+           </div>
+        </form> 
+        </div>
+        <div class="action">
+            <h3 class="title-action">Sprawdź dostępne auta</h3>
+            <div class="add-action">
+                <a asp-area="" asp-controller="Auto" asp-action="SzukajDostepnychSamochodow">
+                    <input type="submit" class="szukaj-dostepnych" value="Sprawdź" />
+                </a>
+            </div>
+        </div>
+        <div class="action">
+            <h3 class="title-action">Dodaj auto: </h3>
+            <div class="add-action">
+                <a method ="get" asp-area="" asp-controller="Auto" asp-action="CreateAuto">
+                    <img id="id" src="https://img.icons8.com/wired/64/000000/create-new.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+@if (Model.Count() > 0)
+{
+    <table id="table" class="table table-striped table-dark table-bordered table-hover table-sm">
+        <thead>
+            <tr class="name-of-headers">
+                <th>Marka</th>
+                <th>Model</th>
+                <th>RokProdukcji</th>
+                <th>Paliwo</th>
+                <th>Vin</th>
+                <th>Przebieg</th>
+                <th>Cena</th>
+                <th>Czy Dostępny</th>
+                <th>Modyfikuj</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var auto in Model)
+            {
+                <tr class="table-rows">
+                    <td width="5%">@auto.Marka</td>
+                    <td width="5%">@auto.Model</td>
+                    <td width="5%">@auto.RokProdukcji</td>
+                    <td width="5%">@auto.RodzajPaliwa</td>
+                    <td width="5%">@auto.Vin</td>
+                    <td width="5%">@auto.Przebieg</td>
+                    <td width="5%">@auto.Cena</td>
+                    <td width="5%">@auto.CzyDostepny.ToString()</td>
+                    <td id="modify-row" width="15%">
+                        <div class="modify">
+                            <a asp-controller="Auto" asp-action="UpdateAuto" asp-route-Id="@auto.IdSamochodu">
+                                <img src="https://img.icons8.com/external-bartama-glyph-64-bartama-graphic/64/000000/external-update-programming-glyph-bartama-glyph-64-bartama-graphic.png" />
+                            </a>
+                            <a asp-controller="Auto" asp-action="DeleteAuto" asp-route-Id="@auto.IdSamochodu">
+                                <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/000000/external-delete-time-smashingstocks-glyph-smashing-stocks.png" />
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p id="Brak">Baza samochodów jest pusta !!!</p>
+}

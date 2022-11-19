@@ -1,0 +1,454 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #285239;
+}
+
+/*Layout */
+#nav-bar {
+    background-color: black;
+    color: azure;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-item:hover {
+    transition: 0.4s;
+    background-color: #303030;
+}
+
+.navbar-brand {
+    color: azure;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+
+.footer-container {
+    background-color: black;
+    color: azure;
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.4rem;
+    text-decoration: 1px underline gold;
+}
+
+.footer-container h1 {
+    font-size: 20px;
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+/*End of section layout*/
+
+/*Section operation*/
+.action-conatiner {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.action {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #303030;
+    color: azure;
+    border: 1px grey solid;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    height: 120px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.title-action {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    font-size: 25px;
+}
+
+.add-logo {
+    width: auto;
+    color: azure;
+}
+
+.add-action {
+    margin-right: 10px;
+}
+
+.look-for {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.08rem;
+}
+
+.szukaj {
+    padding: 10px;
+    margin-left: 10px;
+    border-color: white;
+    letter-spacing: 0.1rem;
+    color: azure;
+    background-color: navy;
+}
+
+    .szukaj:hover {
+        transition: 0.4s;
+        color: azure;
+        border-color: navy;
+        background-color: azure;
+        color: navy;
+    }
+
+.szukaj-dostepnych {
+    padding: 10px;
+    margin-left: 10px;
+    border-color: white;
+    letter-spacing: 0.1rem;
+    color: azure;
+    background-color: darkorchid;
+}
+
+    .szukaj-dostepnych:hover {
+        transition: 0.4s;
+        color: azure;
+        border-color: darkorchid;
+        background-color: azure;
+        color: darkorchid;
+    }
+
+/*Dodawanie pracownika*/
+#label-for {
+    padding-left: 20px;
+    text-align: right;
+}
+
+#Brak {
+    font-size: 30px;
+    color: red;
+    text-align: center;
+    margin-top: 50px;
+    text-decoration: solid 2px;
+}
+
+/*end of section operation*/
+
+/*Section of Views */
+.add-title {
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+    color: azure;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: 1px underline yellow;
+}
+
+.powrot-button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.Powrot-Index {
+    border: 3px solid purple;
+    border-radius: 5px;
+    background-color: azure;
+    color: purple;
+    padding: 10px;
+    letter-spacing: 0.09rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.Powrot-Index:hover {
+    border: 3px solid azure;
+    background-color: purple;
+    color: azure;
+    transition: 0.4s;
+}
+
+.create-conatiner {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-conatiner-auto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.top {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    white-space: break-spaces;
+}
+
+.label-for {
+    color: azure;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+.top-auto {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    white-space: break-spaces;
+}
+
+.space {
+    padding: 16px;
+    visibility: hidden;
+}
+
+#czyDostepny {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    letter-spacing: 0.15rem;
+    margin-bottom: 80px;
+}
+
+#flexSwitchCheckChecked {
+    margin-left: 20px;
+}
+
+#for {
+    flex-direction: column;
+}
+
+
+.input-for {
+    padding-top: 10px;
+    margin-right: 25px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px
+}
+
+#create-inputs {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.szukaj {
+    border: 5px;
+}
+
+/*End of section Views*/
+
+
+/*section index*/
+
+
+.index-title {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 0.25rem;
+}
+
+.title-cointainer {
+    text-align: center;
+    color: azure;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: 2px underline yellow;
+    font-size: 1.2rem;
+}
+
+#table {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#table-container {
+    text-align: center;
+    font-size: 15px;
+    color: azure;
+    vertical-align: middle;
+}
+
+.table-rows{
+    padding: 5px;
+}
+
+.name-of-headers {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.modify {
+    color: gold;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+/*end of section index*/
+
+/*Create section*/
+.top {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin: auto;
+}
+
+.form-group col {
+    display: inline-flex;
+}
+
+.form-control {
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+}
+/*end of section Create*/
+
+
+
+/*section button*/
+.create-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.create-input {
+    border-radius: 15px;
+    margin-right: 20px;
+    font-size: 20px;
+    background-color: azure;
+    border: 3px solid forestgreen;
+    color: green;
+    letter-spacing: 0.3rem;
+    width: 150px;
+    height: 50px;
+}
+
+.create-input:hover {
+    letter-spacing: 0.3rem;
+    background-color: forestgreen;
+    transition: 0.4s;
+    color: azure;
+    border: 3px solid azure;
+}
+
+.back-input {
+    border-radius: 15px;
+    margin-left: 20px;
+    letter-spacing: 0.3rem;
+    font-size: 20px;
+    letter-spacing: 0.3rem;
+    background-color: azure;
+    border: 3px solid red;
+    color: red;
+    width: 150px;
+    height: 50px;
+}
+
+.back-input:hover {
+    letter-spacing: 0.3rem;
+    background-color: red;
+    transition: 0.4s;
+    border: 3px solid azure;
+    color: azure;
+}
+/*end of section button*/
+
+/* HOME */
+.cointainer {
+    border: solid black 5px;
+    border-radius: 10px;
+    background-color: black;
+    margin-bottom: 25px;
+    width: 95%;
+}
+
+.main-cointainer {
+    width: 1200px;
+    height: 325px;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+}
+
+.home-cointainer {
+    width: 550px;
+    height: 300px;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    justify-content: inherit;
+    align-items: center;
+    text-decoration: 2px underline black;
+}
+
+#bottom-pic{
+    margin-bottom: 50px;
+    margin-right: 25px;
+}
+
+/* ZDJECIA */
+#id{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+}
+
+#jpg {
+    width: 550px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 0.7;
+    box-shadow: 5px 10px;
+}

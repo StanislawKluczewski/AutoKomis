@@ -1,0 +1,74 @@
+﻿@model IEnumerable<AutoKomis.Models.Sprzedaz>
+
+<div class="title-cointainer">
+    <div class="row pt-4">
+        <h1 class="index-title">Sprzedaże</h1>
+    </div>
+</div>
+
+
+<form method="get" asp-controller="Sprzedaz" asp-action="SzukajSprzedaży">
+    <div class="action-conatiner">
+        <div class="action">
+            <h3 class="title-action">Szukaj sprzedaży: </h3>
+            <div class="look-for">
+                <input type="date" name="rokPoczatku" />
+                <input type="date" name="rokKonca" />
+                <input type="submit" class="szukaj" value="Szukaj" />
+            </div>
+        </div>
+        <div class="action">
+            <h3 class="title-action">Dodaj sprzedaż: </h3>
+            <div class="add-action">
+                <a class="add-logo" asp-area="" asp-controller="Sprzedaz" asp-action="CreateSprzedaz">
+                    <img id="id" src="https://img.icons8.com/wired/64/000000/create-new.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@if (Model.Count() > 0)
+{
+    <table id="table" class="table table-striped table-dark table-bordered table-hover table-sm">
+        <thead>
+            <tr class="name-of-headers">
+                <th>IdSprzedaży</th>
+                <th>IdSamochodu</th>
+                <th>IdPracownika</th>
+                <th>IdKlienta</th>
+                <th>Data zawarcia umowy</th>
+                <th>Kwota</th>
+                <th>Modyfikuj</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sprzedaze in Model)
+            {
+                <tr class="table-rows">
+                    <td width="10%">@sprzedaze.IdSprzedazy</td>
+                    <td width="10%">@sprzedaze.IdSamochodu</td>
+                    <td width="10%">@sprzedaze.IdPracownika</td>
+                    <td width="10%">@sprzedaze.IdKlienta</td>
+                    <td width="10%">@sprzedaze.DataZawarciaUmowy</td>
+                    <td width="10%">@sprzedaze.Kwota</td>
+                    <td id="modify-row" width="15%">
+                        <div class="modify">
+                            <a asp-controller="Sprzedaz" asp-action="UpdateSprzedaz" asp-route-Id="@sprzedaze.IdSprzedazy">
+                                <img src="https://img.icons8.com/external-bartama-glyph-64-bartama-graphic/64/000000/external-update-programming-glyph-bartama-glyph-64-bartama-graphic.png" />
+                            </a>
+                            <a asp-controller="Sprzedaz" asp-action="DeleteSprzedaz" asp-route-Id="@sprzedaze.IdSprzedazy">
+                                <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/000000/external-delete-time-smashingstocks-glyph-smashing-stocks.png" />
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+else
+{
+    <p id="Brak">Baza sprzedaży jest pusta !!!</p>
+}

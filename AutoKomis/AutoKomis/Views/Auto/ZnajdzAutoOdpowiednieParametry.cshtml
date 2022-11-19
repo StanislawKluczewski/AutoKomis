@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AutoKomis.DTO.Response.AutoResponse>
+
+<div class="title-cointainer">
+    <div class="row pt-4">
+        <h1 class="index-title">Auta o danych parametrach: </h1>
+    </div>
+      <div class="powrot-button">
+        <a asp-area="" class="Powrot-Index" asp-controller="Auto" asp-action="Index">
+            Powrót do Indexu
+        </a>
+      </div>
+</div>
+
+@if (Model.Count() == 0)
+{
+    <p id="Brak">Brak samochodów o podanych parametrach!</p>
+}
+else
+{
+    <table id="table" class="table table-striped table-dark table-bordered table-hover table-sm">
+        <thead>
+            <tr class="name-of-headers">
+                <th>Marka</th>
+                <th>Model</th>
+                <th>RokProdukcji</th>
+                <th>Vin</th>
+                <th>Przebieg</th>
+                <th>Cena</th>
+                <th>Kolor</th>
+                <th>Pojemność Silnika</th>
+                <th>Typ Nadwozia</th>
+                <th>Rodzaj Paliwa</th>
+                <th>Segment</th>
+                <th>Ilość drzwi</th>
+                <th>Czy Dostępny</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var auto in Model)
+            {
+                <tr>
+                    <td width="5%">@auto.Marka</td>
+                    <td width="5%">@auto.Model</td>
+                    <td width="5%">@auto.RokProdukcji</td>
+                    <td width="5%">@auto.Vin</td>
+                    <td width="5%">@auto.Przebieg</td>
+                    <td width="5%">@auto.Cena</td>
+                    <td width="5%">@auto.Kolor</td>
+                    <td width="5%">@auto.PojemnoscSilnika</td>
+                    <td width="5%">@auto.TypNadwozia</td>
+                    <td width="5%">@auto.RodzajPaliwa</td>
+                    <td width="5%">@auto.Segment</td>
+                    <td width="5%">@auto.IloscDrzwi</td>
+                    <td width="7%">@auto.CzyDostepny.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}

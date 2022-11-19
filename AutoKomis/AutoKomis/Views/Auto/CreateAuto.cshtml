@@ -1,0 +1,81 @@
+﻿@model AutoKomis.Models.Auto
+
+<form method="post" asp-controller="Auto" asp-action="CreateAutoPost">
+
+    <h1 class="add-title">Dodaj Auto</h1>
+
+    <div class="create-conatiner-auto">
+        <div class="top-auto">
+            <div class="label-for">
+                <label asp-for="IdKomisu"></label>
+                <hr class="space">
+                <label asp-for="IdSprzedazy"></label>
+                <hr class="space">
+                <label asp-for="IdSamochodu"></label>
+                <hr class="space">
+                <label asp-for="Model"></label>
+                <hr class="space">
+                <label asp-for="Marka"></label>
+            </div>
+            <div class="input-for">
+                <input asp-for="IdKomisu" class="form-control" />
+                <input asp-for="IdSprzedazy" class="form-control" />
+                <input asp-for="IdSamochodu" class="form-control" />
+                <input asp-for="Model" class="form-control" />
+                <input asp-for="Marka" class="form-control" />
+            </div>
+        </div>
+        <div class="top-auto">
+            <div class="label-for">
+                <label asp-for="RokProdukcji"></label>
+                <hr class="space">
+                <label asp-for="RodzajPaliwa"></label>
+                <hr class="space">
+                <label asp-for="TypNadwozia"></label>
+                <hr class="space">
+                <label asp-for="Vin"></label>
+                <hr class="space">
+                <label asp-for="Przebieg"></label>
+            </div>
+            <div class="input-for">
+                <input asp-for="RokProdukcji" class="form-control" />
+                <input asp-for="RodzajPaliwa" class="form-control" />
+                <input asp-for="TypNadwozia" class="form-control" />
+                <input asp-for="Vin" class="form-control" />
+                <input asp-for="Przebieg" class="form-control" />
+            </div>
+        </div>
+        <div class="top-auto">
+            <div class="label-for">
+                <label asp-for="Cena"></label>
+                <hr class="space">
+                <label asp-for="Kolor"></label>
+                <hr class="space">
+                <label asp-for="PojemnoscSilnika"></label>
+                <hr class="space">
+                <label asp-for="Segment"></label>
+                <hr class="space">
+                <label asp-for="IloscDrzwi"></label>
+            </div>
+            <div class="input-for">
+                <input asp-for="Cena" class="form-control" />
+                <input asp-for="Kolor" class="form-control" />
+                <input asp-for="PojemnoscSilnika" class="form-control" />
+                <input asp-for="Segment" class="form-control" />
+                <input asp-for="IloscDrzwi" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="form-check form-switch" id="czyDostepny">
+        <label asp-for="CzyDostepny"></label>
+        <input class="form-check-input" asp-for="CzyDostepny" type="checkbox" id="flexSwitchCheckChecked" checked>
+    </div>
+    <div class="create-submit">
+        <div class="create-button">
+            <input type="submit" value="Create" class="create-input" />
+        </div>
+        <div class="back-button">
+            <button asp-controller="Auto" asp-action="Index" class="back-input">Back</button>
+        </div>
+    </div>
+</form>

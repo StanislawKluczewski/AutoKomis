@@ -1,0 +1,40 @@
+﻿@model AutoKomis.Models.Pracownik
+
+<form method="post" asp-controller="Pracownik" asp-action="UpdatePracownikPost">
+    <input asp-for="IdPracownika" hidden />
+    <div class="create-conatiner" asp-validation-summary="All">
+        <h1 class="add-title">Update wybranego pracownika: </h1>
+        <div class="create-conatiner">
+
+            <div class="top">
+                <div class="label-for">
+                    <label asp-for="Imie"></label>
+                    <hr class="space">
+                    <label asp-for="Nazwisko"></label>
+                    <hr class="space">
+                    <label asp-for="Stanowisko"></label>
+                    <hr class="space">
+                    <label asp-for="IdKomisu"></label>
+                    <hr class="space">
+                    <label asp-for="NrDowodu"></label>
+                </div>
+                <div class="input-for">
+                    <input asp-for="Imie" class="form-control" />
+                    <input asp-for="Nazwisko" class="form-control" />
+                    <input asp-for="Stanowisko" class="form-control" />
+                    <input asp-for="IdKomisu" class="form-control" />
+                    <input asp-for="NrDowodu" class="form-control" />
+                </div>
+            </div>
+
+            <div class="create-submit">
+                <div class="create-button">
+                    <input type="submit" value="Update" class="create-input" />
+                </div>
+                <div class="back-button">
+                    <button asp-controller="Pracownik" asp-action="Index" class="back-input">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
