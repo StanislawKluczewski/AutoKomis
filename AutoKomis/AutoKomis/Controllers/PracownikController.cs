@@ -63,7 +63,6 @@ namespace AutoKomis.Controllers
                 return NotFound();
             }
 
-            // var obj = _db.Pracownicy.FirstOrDefault(x => x.IdPracownika == id);
             var obj = _db.Pracownicy.Find(pracownik.IdPracownika);
             if (obj == null)
             {
